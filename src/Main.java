@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 public class Main {
 
@@ -7,7 +6,18 @@ public class Main {
 
         String[] words = WordleFileManager.readFileWords();
 
+        WordleFeedBack feedback = new WordleFeedBack();
 
+        String result = feedback.feedBackString("AAABB", "AAAAA");
+
+        System.out.println(result);
+
+        /*
+        for (String word : words) {
+            System.out.println(word);
+        }
+
+        */
 
     }
 

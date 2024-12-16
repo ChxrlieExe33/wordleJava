@@ -1,37 +1,65 @@
+/**
+ * Clase encargada de colorear los intentos de palabras basados en como de correcto era
+ * @author Charles Crane
+ * @version 1.0
+ */
 public class WordleFeedBack {
 
     private static final int WORD_LENGTH = 5;
 
     public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
 
     /**
-     * Will color each letter sent to it
-     * @param letter
-     * @param color
-     * @return
+     * Colorea la letra pasada con el color especificado.
+     * @param letter Letra para ser coloreada
+     * @param color Codio de color ANSI
+     * @return String con la letra coloreada
      */
     private static String applyColor(String letter, String color) {
-        return "";
+
+        return color + letter;
+
     }
 
     /**
-     * This will loop through the letters of each word at the same index, check if they are the same,
-     * and call applyColor to color each one appropriately
+     * Hace un bucle donde revisa cada letra de la palabra intentada comparándolo con la
+     * palabra secreta y especificando que color hay que aplicar
      *
-     * @param guess
-     * @param secretWord
-     * @return
+     * @param guess Intento de palabra
+     * @param secretWord Palabra secreta
+     * @return String coloreado de la palabra intentada
      */
-    public static String feedBackString(String guess, String secretWord){
-        return "";
+    public String feedBackString(String guess, String secretWord){
+
+        // Utilizando un StringBuilder para construir el string final
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < guess.length(); i++) {
+
+            char c = guess.charAt(i);
+
+            if(c == secretWord.charAt(i)){
+
+                // Si la letra esta en la posición correcta
+                sb.append(applyColor(String.valueOf(c), ANSI_GREEN));
+
+            } else if (secretWord.contains(String.valueOf(c))) {
+
+                // Si la letra existe en la palabra, pero está en la posición incorrecta
+                sb.append(applyColor(String.valueOf(c), ANSI_YELLOW));
+
+            } else {
+
+                // Si la letra no existe en la palabra
+                sb.append(applyColor(String.valueOf(c), ANSI_RESET));
+
+            }
+        }
+
+        return sb.toString();
+
     }
 
 }
