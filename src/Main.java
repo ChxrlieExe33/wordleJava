@@ -6,9 +6,8 @@ public class Main {
 
         String[] words = WordleFileManager.readFileWords();
 
-        WordleFeedBack feedback = new WordleFeedBack();
 
-        String result = feedback.feedBackString("AAABB", "AAAAA");
+        String result = WordleFeedBack.feedBackString("AAABB", "AAAAA");
 
         System.out.println(result);
 

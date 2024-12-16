@@ -31,7 +31,7 @@ public class WordleFeedBack {
      * @param secretWord Palabra secreta
      * @return String coloreado de la palabra intentada
      */
-    public String feedBackString(String guess, String secretWord){
+    public static String feedBackString(String guess, String secretWord){
 
         // Utilizando un StringBuilder para construir el string final
         StringBuilder sb = new StringBuilder();
