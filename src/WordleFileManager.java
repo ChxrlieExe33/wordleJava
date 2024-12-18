@@ -10,6 +10,8 @@ import java.util.*;
  */
 public class WordleFileManager {
 
+    private static final String gameFile = "src\\juegos.txt";
+
     /**
      * Lee un fichero de palabras, los convierte a mayúsculas y las almacena en un array
      * @return Un array de palabras
@@ -47,6 +49,22 @@ public class WordleFileManager {
 
         return palabras;
 
+
+    }
+
+    public static void writeGameHistory(String content){
+
+        try {
+            FileWriter fw = new FileWriter(gameFile, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            bw.write(content);
+            bw.newLine();
+            bw.close();
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 

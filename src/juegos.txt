@@ -1,0 +1,15 @@
+Palabra secreta: FELIZ
+FELIZ
+-----
+Palabra secreta: TORRE
+TORRA
+TEORR
+TORRE
+-----
+Palabra secreta: JUEGO
+Palabra secreta: BANCO
+Palabra secreta: CASAS
+AMIGO
+SILLA
+CASAS
+-----

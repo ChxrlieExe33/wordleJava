@@ -45,9 +45,12 @@ public class WordleGame {
         Scanner sc = new Scanner(System.in);
         String input;
         String resultado;
+        boolean juegoGanado = false;
         int intento = 0;
 
-        /* System.out.println("La palabra secreta es: " + secretWord); */
+        // System.out.println("La palabra secreta es: " + secretWord);
+
+        WordleFileManager.writeGameHistory("Palabra secreta: " + secretWord);
 
         while(remainingAttempts > 0){
             if(intento > 0){
@@ -56,19 +59,24 @@ public class WordleGame {
 
             System.out.println("Tienes " + remainingAttempts + " intentos");
             input = getUserInput(sc);
+            WordleFileManager.writeGameHistory(input);
             resultado = WordleFeedBack.feedBackString(input, secretWord);
             triesHistory[intento] = resultado;
 
             if(input.equals(secretWord)){
-                showTriesHistory();
-                System.out.println("Enhorabuena, has ganado!");
+                juegoGanado = true;
                 break;
             }
             intento++;
             remainingAttempts--;
         }
 
-        if (remainingAttempts == 0){
+        WordleFileManager.writeGameHistory("-----");
+
+        if(juegoGanado){
+            showTriesHistory();
+            System.out.println("Enhorabuena, has ganado!");
+        } else {
             showTriesHistory();
             System.out.println("Has perdido, La palabra secreta era: " + secretWord);
         }
@@ -120,6 +128,8 @@ public class WordleGame {
         System.out.println("Introduce una palabra de " + WORD_LENGTH + " letras:");
         System.out.print("-> ");
         String palabra = sc.nextLine();
+
+        palabra = palabra.toUpperCase();
 
         while (true){
 
