@@ -36,6 +36,10 @@ public class WordleFeedBack {
         // Utilizando un StringBuilder para construir el string final
         StringBuilder sb = new StringBuilder();
 
+        guess = guess.toUpperCase();
+
+        sb.append(ANSI_RESET);
+
         for (int i = 0; i < guess.length(); i++) {
 
             char c = guess.charAt(i);
@@ -57,6 +61,8 @@ public class WordleFeedBack {
 
             }
         }
+
+        sb.append(ANSI_RESET);
 
         return sb.toString();
 
