@@ -1,15 +1,23 @@
-import java.util.Random;
-import java.util.Scanner;
 
+/**
+ * @author Charles Crane
+ * @version 1.0
+ */
 public class Main {
 
+    /**
+     * Punto de entrada para la aplicación donde se invoca al juego
+     * @param args Argumentos de linea de comandos
+     */
     public static void main(String[] args) {
 
-        // 1. Get the list of words
+        // Obtener array de palabras
         String[] listaPalabras = WordleFileManager.readFileWords();
 
-        // 2. Initialize the WordleGame class and start the game
+        // Declarar e inicializar el juego
         WordleGame game = new WordleGame(listaPalabras);
+
+        // Empezar el juego
         game.start();
 
 

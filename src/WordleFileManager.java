@@ -52,6 +52,10 @@ public class WordleFileManager {
 
     }
 
+    /**
+     * Inserta el texto dentro del fichero de juego
+     * @param content El contenido para escribir en cada línea
+     */
     public static void writeGameHistory(String content){
 
         try {

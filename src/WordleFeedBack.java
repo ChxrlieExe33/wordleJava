@@ -5,8 +5,6 @@
  */
 public class WordleFeedBack {
 
-    private static final int WORD_LENGTH = 5;
-
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
@@ -36,8 +34,10 @@ public class WordleFeedBack {
         // Utilizando un StringBuilder para construir el string final
         StringBuilder sb = new StringBuilder();
 
+        // Empezar con un reset por si el ultimo string lleva color
         sb.append(ANSI_RESET);
 
+        // Comparar todas las letras del intento
         for (int i = 0; i < guess.length(); i++) {
 
             char c = guess.charAt(i);

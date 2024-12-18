@@ -20,7 +20,6 @@ public class WordleGame {
     /**
      * Constructor del juego
      * @param fileWords
-     * @see selectRandomWord()
      */
     public WordleGame(String[] fileWords) {
 
@@ -50,19 +49,23 @@ public class WordleGame {
 
         // System.out.println("La palabra secreta es: " + secretWord);
 
-        WordleFileManager.writeGameHistory("Palabra secreta: " + secretWord);
-
+        // Continuar juego hasta que se agoten los intentos
         while(remainingAttempts > 0){
+
+            // No mostrar la historia si es el primer intento
             if(intento > 0){
                 showTriesHistory();
             }
 
             System.out.println("Tienes " + remainingAttempts + " intentos");
             input = getUserInput(sc);
+
+            // Guardar palabra sin colores al fichero de juegos
             WordleFileManager.writeGameHistory(input);
             resultado = WordleFeedBack.feedBackString(input, secretWord);
             triesHistory[intento] = resultado;
 
+            // Terminar bucle si palabra es correcta
             if(input.equals(secretWord)){
                 juegoGanado = true;
                 break;
@@ -71,8 +74,10 @@ public class WordleGame {
             remainingAttempts--;
         }
 
+        WordleFileManager.writeGameHistory("Palabra secreta: " + secretWord);
         WordleFileManager.writeGameHistory("-----");
 
+        // Mostrar mensaje adecuado del resultado del juego
         if(juegoGanado){
             showTriesHistory();
             System.out.println("Enhorabuena, has ganado!");
@@ -133,6 +138,7 @@ public class WordleGame {
 
         while (true){
 
+            // Mantenerse en el bucle hasta que la palabra introducida tiene la longitud correcta
             if (palabra.length() == WORD_LENGTH){
                 break;
             } else {
