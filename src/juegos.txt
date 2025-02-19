@@ -2,3 +2,84 @@ JUEGO
 CIELO
 Palabra secreta: CIELO
 -----
+TORRE
+JUEGO
+CIELO
+BANCO
+Palabra secreta: BANCO
+-----
+AGRIO
+RAUFD
+DAMRE
+WADRE
+PADRE
+Palabra secreta: PADRE
+-----
+perro
+GRAEP
+buena
+CVFDQ
+WNMDZ
+NAKDY
+Palabra secreta: LINDO
+-----
+HOLAS
+HBODF
+HEBDO
+HUERO
+HURRO
+HUERO
+Palabra secreta: HURTO
+-----
+CALOR
+SECAR
+NACER
+ACERO
+HUEVO
+LLEGO
+Palabra secreta: PIEDA
+-----
+SECAR
+RAMOS
+CIRCO
+TIRIO
+GRITO
+GRITO
+Palabra secreta: GRITO  
+-----
+MUNDO
+MUNDO
+MUNDO
+LUNES
+LUNES
+LUNES
+LUNES
+LUNES
+LUNES
+Palabra secreta: LUNES  
+-----
+SUELO
+SUELO
+PERRO
+PERRO
+FRESA
+TINTO
+TABLA
+Palabra secreta: TABLA
+-----
+RUEDA
+Palabra secreta: RUEDA
+-----
+NIEVE
+VENTE
+VERDE
+Palabra secreta: VERDE
+-----
+sdkja
+DFGJK
+VASDE
+GNJFC
+EKJNS
+AJKSN
+Palabra secreta: ARBOL
+-----

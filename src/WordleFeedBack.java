@@ -60,6 +60,7 @@ public class WordleFeedBack {
             }
         }
 
+        // Añadir reset al final porque a veces colorea el siguiente string también si no lo aplicas
         sb.append(ANSI_RESET);
 
         return sb.toString();

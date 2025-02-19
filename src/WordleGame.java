@@ -19,7 +19,7 @@ public class WordleGame {
 
     /**
      * Constructor del juego
-     * @param fileWords
+     * @param fileWords Array de palabras extraídas de un fichero
      */
     public WordleGame(String[] fileWords) {
 
@@ -47,12 +47,10 @@ public class WordleGame {
         boolean juegoGanado = false;
         int intento = 0;
 
-        // System.out.println("La palabra secreta es: " + secretWord);
-
         // Continuar juego hasta que se agoten los intentos
         while(remainingAttempts > 0){
 
-            // No mostrar la historia si es el primer intento
+            // No mostrar la historia si es el primer intento, ya que estará vació
             if(intento > 0){
                 showTriesHistory();
             }
