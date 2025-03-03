@@ -47,6 +47,8 @@ public class WordleGame {
         boolean juegoGanado = false;
         int intento = 0;
 
+        System.out.println("Palabra secreta para mostrar funcionamiento: " + secretWord);
+
         // Continuar juego hasta que se agoten los intentos
         while(remainingAttempts > 0){
 
@@ -143,6 +145,7 @@ public class WordleGame {
                 System.out.println("\u001B[31m" + "La palabra tiene que ser de " + WORD_LENGTH + " letras, intentalo otra vez" + "\u001B[0m");
                 System.out.print("-> ");
                 palabra = sc.nextLine();
+                palabra = palabra.toUpperCase();
             }
 
         }

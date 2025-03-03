@@ -83,3 +83,16 @@ EKJNS
 AJKSN
 Palabra secreta: ARBOL
 -----
+AGRIO
+MARIO
+MARIO
+MARIO
+VAPOR
+Palabra secreta: VAPOR
+-----
+AGUAS
+RUEDA
+Palabra secreta: RUEDA
+-----
+AGRIO
+juego
